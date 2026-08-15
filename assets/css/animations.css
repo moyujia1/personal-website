@@ -1,0 +1,202 @@
+/* ========================================
+   动画库 — CSS Keyframe Animations
+   类似 React Bits 风格的动效
+   ======================================== */
+
+/* --- 浮动动画 --- */
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-12px); }
+}
+
+@keyframes float-slow {
+  0%, 100% { transform: translateY(0px) rotate(0deg); }
+  33% { transform: translateY(-8px) rotate(1deg); }
+  66% { transform: translateY(4px) rotate(-1deg); }
+}
+
+/* --- 脉冲光晕 --- */
+@keyframes pulse-glow {
+  0%, 100% {
+    box-shadow: 0 0 20px rgba(255, 98, 98, 0.15),
+                0 0 40px rgba(255, 98, 98, 0.05);
+  }
+  50% {
+    box-shadow: 0 0 35px rgba(255, 98, 98, 0.3),
+                0 0 70px rgba(255, 98, 98, 0.12),
+                0 0 100px rgba(255, 98, 98, 0.05);
+  }
+}
+
+/* --- 淡入上滑 --- */
+@keyframes fade-in-up {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fade-in-down {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fade-in-left {
+  from {
+    opacity: 0;
+    transform: translateX(-40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fade-in-right {
+  from {
+    opacity: 0;
+    transform: translateX(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* --- 缩放进入 --- */
+@keyframes scale-in {
+  from {
+    opacity: 0;
+    transform: scale(0.85);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* --- 打字机闪烁光标 --- */
+@keyframes blink-caret {
+  0%, 100% { border-color: transparent; }
+  50% { border-color: var(--color-accent); }
+}
+
+/* --- 渐变流动 --- */
+@keyframes gradient-shift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* --- 水印呼吸 --- */
+@keyframes watermark-breathe {
+  0%, 100% { opacity: 0.12; }
+  50% { opacity: 0.25; }
+}
+
+/* --- 旋转 --- */
+@keyframes spin-slow {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+/* --- 卡片 hover 抬起 --- */
+@keyframes card-lift {
+  from {
+    transform: translateY(0);
+    box-shadow: var(--shadow-card);
+  }
+  to {
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-card-hover);
+  }
+}
+
+/* --- 波浪 --- */
+@keyframes wave {
+  0%, 100% { transform: rotate(0deg); }
+  25% { transform: rotate(-10deg); }
+  75% { transform: rotate(12deg); }
+}
+
+/* --- 粒子闪烁 --- */
+@keyframes sparkle {
+  0%, 100% { opacity: 0; transform: scale(0); }
+  50% { opacity: 1; transform: scale(1); }
+}
+
+/* ========================================
+   通用动画工具类
+   ======================================== */
+
+.anim-float {
+  animation: float 4s ease-in-out infinite;
+}
+
+.anim-float-slow {
+  animation: float-slow 6s ease-in-out infinite;
+}
+
+.anim-pulse-glow {
+  animation: pulse-glow 3s ease-in-out infinite;
+}
+
+.anim-watermark-breathe {
+  animation: watermark-breathe 6s ease-in-out infinite;
+}
+
+.anim-spin-slow {
+  animation: spin-slow 12s linear infinite;
+}
+
+/* 延迟工具类 */
+.anim-delay-1 { animation-delay: 0.1s; }
+.anim-delay-2 { animation-delay: 0.2s; }
+.anim-delay-3 { animation-delay: 0.3s; }
+.anim-delay-4 { animation-delay: 0.4s; }
+.anim-delay-5 { animation-delay: 0.5s; }
+.anim-delay-6 { animation-delay: 0.6s; }
+
+/* ========================================
+   滚动触发动画（配合 useScrollReveal）
+   ======================================== */
+
+.scroll-reveal {
+  opacity: 0;
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+
+.scroll-reveal--up {
+  transform: translateY(40px);
+}
+
+.scroll-reveal--down {
+  transform: translateY(-40px);
+}
+
+.scroll-reveal--left {
+  transform: translateX(-40px);
+}
+
+.scroll-reveal--right {
+  transform: translateX(40px);
+}
+
+.scroll-reveal--scale {
+  transform: scale(0.9);
+}
+
+.scroll-reveal.is-visible {
+  opacity: 1;
+  transform: translate(0) scale(1);
+}

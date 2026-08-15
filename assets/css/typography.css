@@ -1,0 +1,72 @@
+/* ========================================
+   字体和排版
+   ======================================== */
+
+/* --- 引入 Google Fonts --- */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;700&family=Roboto:wght@400;500&family=Roboto+Condensed:wght@400;700&family=Instrument+Serif:ital@0;1&display=swap');
+
+/* --- 标题预设 --- */
+.heading-1 {
+  font-family: var(--font-sans);
+  font-weight: 500;
+  font-size: var(--text-3xl);
+  line-height: var(--leading-normal);
+}
+
+.heading-2 {
+  font-family: var(--font-sans);
+  font-weight: 500;
+  font-size: var(--text-lg);
+  line-height: var(--leading-normal);
+}
+
+.heading-3 {
+  font-family: var(--font-sans);
+  font-weight: 500;
+  font-size: var(--text-base);
+  line-height: var(--leading-normal);
+}
+
+/* --- 正文预设 --- */
+.body-text {
+  font-family: var(--font-sans);
+  font-weight: 400;
+  font-size: var(--text-sm);
+  line-height: var(--leading-relaxed);
+}
+
+.body-text-lg {
+  font-family: var(--font-sans);
+  font-weight: 400;
+  font-size: var(--text-base);
+  line-height: var(--leading-relaxed);
+}
+
+/* --- 英文专用 --- */
+.text-en {
+  font-family: var(--font-en);
+}
+
+.text-en-muted {
+  font-family: var(--font-en);
+  font-size: var(--text-sm);
+  color: var(--color-text-secondary);
+  letter-spacing: 1.47px;
+}
+
+/* --- 展示字体(水印/年份) --- */
+.text-display {
+  font-family: var(--font-display);
+  font-weight: 700;
+}
+
+/* --- 链接样式 --- */
+.text-link {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  transition: color var(--transition-fast);
+}
+
+.text-link:hover {
+  color: var(--color-accent);
+}

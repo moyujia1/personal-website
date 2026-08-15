@@ -1,0 +1,70 @@
+/* ========================================
+   设计令牌 (Design Tokens)
+   所有颜色、间距、排版、圆角等变量
+   ======================================== */
+
+:root {
+  /* === 颜色系统 === */
+  --color-bg-start: #1f2551;
+  --color-bg-end: #120b4f;
+  --color-bg-gradient: linear-gradient(180deg, var(--color-bg-start), var(--color-bg-end));
+
+  --color-card-blue: #353a84;
+  --color-card-dark: #151d6b;
+  --color-nav-bg: #151d6b;
+
+  --color-text-primary: #ffffff;
+  --color-text-secondary: rgba(255, 255, 255, 0.46);
+  --color-accent: #e8c97a;
+
+  --color-badge-bg: #717ef1;
+  --color-badge-text: #000a69;
+
+  --color-btn-bg: #353a84;
+  --color-btn-hover: #454a94;
+
+  /* === 间距系统 === */
+  --space-xs: 4px;
+  --space-sm: 8px;
+  --space-md: 16px;
+  --space-lg: 24px;
+  --space-xl: 32px;
+  --space-2xl: 48px;
+  --space-3xl: 64px;
+  --space-4xl: 80px;
+
+  /* === 排版 === */
+  --font-sans: 'Noto Sans SC', 'PingFang SC', 'Microsoft YaHei', 'Hiragino Sans GB', sans-serif;
+  --font-en: 'Roboto', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+  --font-display: 'Roboto Condensed', 'Arial Narrow', sans-serif;
+
+  --text-xs: 12px;
+  --text-sm: 14px;
+  --text-base: 16px;
+  --text-lg: 18px;
+  --text-xl: 24px;
+  --text-2xl: 32px;
+  --text-3xl: 48px;
+  --text-watermark: 342px;
+
+  --leading-normal: normal;
+  --leading-relaxed: 1.314;
+
+  /* === 圆角 === */
+  --radius-sm: 8px;
+  --radius-md: 16px;
+  --radius-lg: 24px;
+  --radius-xl: 48px;
+
+  /* === 导航 === */
+  --nav-height: 80px;
+  --nav-height-mobile: 64px;
+
+  /* === 阴影 === */
+  --shadow-card: 0 4px 20px rgba(0, 0, 0, 0.25);
+  --shadow-card-hover: 0 8px 32px rgba(0, 0, 0, 0.4);
+
+  /* === 过渡 === */
+  --transition-fast: 0.2s ease;
+  --transition-normal: 0.3s ease;
+}
