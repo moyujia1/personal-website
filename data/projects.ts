@@ -30,4 +30,14 @@ export const projects: Project[] = [
     link: '',
     category: 'systematic',
   },
+  {
+    id: '3',
+    title: '手势粒子 3D',
+    description: '基于 Three.js + MediaPipe 的实时手势交互 3D 粒子系统：两万颗光点随手掌流动，左手切换文字形态、右手握拳时汇聚成一颗跳动的 3D 爱心。',
+    thumbnail: '',
+    tag: '3D 交互',
+    year: '2026.08',
+    link: 'https://moyujia1.github.io/hand-particle-3d/',
+    category: 'systematic',
+  },
 ];
