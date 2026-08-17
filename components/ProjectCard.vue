@@ -10,7 +10,7 @@
     <div class="project-card__image">
       <img
         v-if="thumbnail"
-        :src="thumbnail"
+        :src="resolvedThumbnail"
         :alt="title"
         class="project-card__img"
         loading="lazy"
@@ -32,13 +32,18 @@
 </template>
 
 <script setup lang="ts">
-defineProps<{
+const props = defineProps<{
   title: string;
   thumbnail?: string;
   tag?: string;
   year?: number | string;
   link?: string;
 }>();
+
+const { baseURL } = useRuntimeConfig().app;
+const resolvedThumbnail = computed(() =>
+  props.thumbnail ? `${baseURL}${props.thumbnail}` : ''
+);
 </script>
 
 <style scoped>

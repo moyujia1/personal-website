@@ -66,7 +66,7 @@ const filteredProjects = computed(() =>
 
 <style scoped>
 .works-page {
-  padding: var(--space-xl) var(--space-lg);
+  padding: calc(var(--nav-height) + var(--space-xl)) var(--space-lg) var(--space-xl);
 }
 
 /* 二级导航 */
@@ -140,7 +140,7 @@ const filteredProjects = computed(() =>
 
 @media (max-width: 767px) {
   .works-page {
-    padding: var(--space-md);
+    padding: calc(var(--nav-height-mobile) + var(--space-md)) var(--space-md) var(--space-md);
   }
 
   .works-subnav {
