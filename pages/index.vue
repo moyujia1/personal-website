@@ -92,9 +92,6 @@
       </div>
     </div>
   </div>
-
-  <!-- 往下滑进入「阿佳的星空之旅」 -->
-  <CinemaScroll />
 </template>
 
 <script setup lang="ts">

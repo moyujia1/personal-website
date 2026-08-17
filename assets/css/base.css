@@ -9,8 +9,7 @@ body {
   background: var(--color-bg-gradient);
   background-attachment: fixed;
   min-height: 100vh;
-  /* clip 不会像 hidden 那样把 body 变成滚动容器，从而保留 position: sticky 的正常行为（星空卷轴依赖它） */
-  overflow-x: clip;
+  overflow-x: hidden;
 }
 
 /* 主内容区域（导航栏下方） */
